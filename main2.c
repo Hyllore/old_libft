@@ -6,7 +6,7 @@
 /*   By: student@42 <@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 14:43:06 by student@42        #+#    #+#             */
-/*   Updated: 2015/12/01 17:19:45 by droly            ###   ########.fr       */
+/*   Updated: 2015/12/01 18:51:35 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -200,11 +200,11 @@ int                 main(void)
     D_ADD_TEST(memalloc_and_del);
 #define D_STRNEW
     D_ADD_TEST(strnew);
-/*#define D_STRDEL
+#define D_STRDEL
     D_ADD_TEST(strdel);
 #define D_STRCLR
     D_ADD_TEST(strclr);
-#define D_STRITER
+/*#define D_STRITER
     D_ADD_TEST(striter);
 #define D_STRITERI
     D_ADD_TEST(striteri);

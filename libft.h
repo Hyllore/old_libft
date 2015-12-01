@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 15:09:59 by droly             #+#    #+#             */
-/*   Updated: 2015/12/01 17:31:22 by droly            ###   ########.fr       */
+/*   Updated: 2015/12/01 18:53:09 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t n);
 void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);
 char	*ft_strnew(size_t size);
+void	ft_strdel(char **as);
+void	ft_strclr(char*s);
 
 #endif
