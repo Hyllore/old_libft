@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 15:09:59 by droly             #+#    #+#             */
-/*   Updated: 2015/11/30 15:59:48 by droly            ###   ########.fr       */
+/*   Updated: 2015/12/01 17:31:22 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,8 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strncat(char *s1, const char *s2, size_t n);
 int		ft_atoi(const char *str);
 size_t	ft_strlcat(char *dst, const char *src, size_t n);
+void	*ft_memalloc(size_t size);
+void	ft_memdel(void **ap);
+char	*ft_strnew(size_t size);
 
 #endif
