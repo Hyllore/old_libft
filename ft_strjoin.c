@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/25 10:01:34 by droly             #+#    #+#             */
-/*   Updated: 2015/12/02 15:48:38 by droly            ###   ########.fr       */
+/*   Created: 2015/12/02 14:57:42 by droly             #+#    #+#             */
+/*   Updated: 2015/12/02 15:32:54 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *s1, const char *s2)
+char		*ft_strjoin(char const *s1, char const *s2)
 {
-	int i;
-	int i2;
+	char	*str;
+	int		i;
 
-	i = 0;
-	i2 = 0;
-	while (s1[i] != '\0')
-		i++;
-	while (s2[i2] != '\0')
-	{
-		s1[i] = s2[i2];
-		i++;
-		i2++;
-	}
-	s1[i] = '\0';
-	return (s1);
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
+	i = ft_strlen(s1) + ft_strlen(s2);
+	str = (char*)malloc(sizeof(*str) * (i + 1));
+	if (str == NULL)
+		return (NULL);
+	ft_strcpy(str, s1);
+	ft_strcat(str, s2);
+	return (str);
 }

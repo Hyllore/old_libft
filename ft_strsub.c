@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/25 10:01:34 by droly             #+#    #+#             */
-/*   Updated: 2015/12/02 15:48:38 by droly            ###   ########.fr       */
+/*   Created: 2015/12/02 12:31:57 by droly             #+#    #+#             */
+/*   Updated: 2015/12/02 14:53:50 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *s1, const char *s2)
+char				*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	int i;
-	int i2;
+	unsigned int	i;
+	char			*str;
 
 	i = 0;
-	i2 = 0;
-	while (s1[i] != '\0')
-		i++;
-	while (s2[i2] != '\0')
+	if (s == NULL)
+		return (NULL);
+	str =  malloc(sizeof(char) * len + 1);
+	if (str == NULL)
+		return (NULL);
+	if (start > ft_strlen(s))
+		return (NULL);
+	while (i < len)
 	{
-		s1[i] = s2[i2];
+		str[i] = s[i + start];
 		i++;
-		i2++;
 	}
-	s1[i] = '\0';
-	return (s1);
+	str[i] = 0;
+	return (str);
 }

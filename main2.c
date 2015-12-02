@@ -6,7 +6,7 @@
 /*   By: student@42 <@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 14:43:06 by student@42        #+#    #+#             */
-/*   Updated: 2015/12/01 18:51:35 by droly            ###   ########.fr       */
+/*   Updated: 2015/12/02 16:59:01 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -204,7 +204,7 @@ int                 main(void)
     D_ADD_TEST(strdel);
 #define D_STRCLR
     D_ADD_TEST(strclr);
-/*#define D_STRITER
+#define D_STRITER
     D_ADD_TEST(striter);
 #define D_STRITERI
     D_ADD_TEST(striteri);
@@ -220,13 +220,13 @@ int                 main(void)
     D_ADD_TEST(strsub);
 #define D_STRJOIN
     D_ADD_TEST(strjoin);
-#define D_STRSPLIT
-    D_ADD_TEST(strsplit);
-#define D_ITOA
-    D_ADD_TEST(itoa);
+//#define D_STRSPLIT
+//    D_ADD_TEST(strsplit);
+//#define D_ITOA
+//    D_ADD_TEST(itoa);
 #define D_STRTRIM
     D_ADD_TEST(strtrim);
-#define D_LSTNEW
+/*#define D_LSTNEW
     D_ADD_TEST(lstnew);
 #define D_LSTDELONE
     D_ADD_TEST(lstdelone);
