@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:04:00 by droly             #+#    #+#             */
-/*   Updated: 2015/11/28 15:35:40 by droly            ###   ########.fr       */
+/*   Updated: 2015/12/03 18:06:16 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ char	*ft_strdup(const char *s)
 	while (s[len] != '\0')
 		len++;
 	dst = (char*)malloc(sizeof(char) * len + 1);
+	if (dst == NULL)
+		return (NULL);
 	while (s[i] != '\0')
 	{
 		dst[i] = s[i];

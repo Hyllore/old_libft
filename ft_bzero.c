@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 14:53:24 by droly             #+#    #+#             */
-/*   Updated: 2015/11/26 17:50:05 by droly            ###   ########.fr       */
+/*   Updated: 2015/12/03 18:50:49 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,12 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	int		i;
-	char	*str;
+	size_t		i;
 
-	str = (char*)s;
 	i = 0;
-	while (i < (int)n)
+	while (i < n)
 	{
-		str[i] = '\0';
+		((char *)s)[i] = 0;
 		i++;
 	}
 }
