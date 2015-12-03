@@ -6,7 +6,7 @@
 /*   By: student@42 <@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 14:43:06 by student@42        #+#    #+#             */
-/*   Updated: 2015/12/03 11:54:58 by droly            ###   ########.fr       */
+/*   Updated: 2015/12/03 16:41:38 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -222,8 +222,8 @@ int                 main(void)
     D_ADD_TEST(strjoin);
 //#define D_STRSPLIT
 //    D_ADD_TEST(strsplit);
-//#define D_ITOA
-//    D_ADD_TEST(itoa);
+#define D_ITOA
+    D_ADD_TEST(itoa);
 #define D_STRTRIM
     D_ADD_TEST(strtrim);
 /*#define D_LSTNEW
@@ -729,42 +729,42 @@ int             uf_test_itoa(void)
     {
         printf("Error Line %d, Funct %s : \n\033[31mft_itoa(0).\nExpected ret = \"0\" \
                but have ret = \"%s\"\033[0m\n", __LINE__ - 2, __func__, ret);
-        free(ret);
+        //free(ret);
         return (0);
     }
-    free(ret);
+    //free(ret);
     if (strcmp(ret = ft_itoa(-123), "-123") != 0)
     {
         printf("Error Line %d, Funct %s : \n\033[31mft_itoa(-123).\nExpected ret = \"-123\" \
                but have ret = \"%s\"\033[0m\n", __LINE__ - 2, __func__, ret);
-        free(ret);
+        //free(ret);
         return (0);
     }
-    free(ret);
+    //free(ret);
     if (strcmp(ret = ft_itoa(123), "123") != 0)
     {
         printf("Error Line %d, Funct %s : \n\033[31mft_itoa(123).\nExpected ret = \"123\" \
                but have ret = \"%s\"\033[0m\n", __LINE__ - 2, __func__, ret);
-        free(ret);
+        //free(ret);
         return (0);
     }
-    free(ret);
+    //free(ret);
     if (strcmp(ret = ft_itoa(-2147483648), "-2147483648") != 0)
     {
         printf("Error Line %d, Funct %s : \n\033[31mft_itoa(-2147483648).\nExpected ret = \"-2147483648\" \
                but have ret = \"%s\"\033[0m\n", __LINE__ - 2, __func__, ret);
-        free(ret);
+       // free(ret);
         return (0);
     }
-    free(ret);
+    //free(ret);
     if (strcmp(ret = ft_itoa(2147483647), "2147483647") != 0)
     {
         printf("Error Line %d, Funct %s : \n\033[31mft_itoa(2147483647).\nExpected ret = \"2147483647\" \
                but have ret = \"%s\"\033[0m\n", __LINE__ - 2, __func__, ret);
-        free(ret);
+      //  free(ret);
         return (0);
     }
-    free(ret);
+    //free(ret);
     return (1);
 }
 #endif
