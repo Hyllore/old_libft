@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 12:31:57 by droly             #+#    #+#             */
-/*   Updated: 2015/12/02 14:53:50 by droly            ###   ########.fr       */
+/*   Updated: 2015/12/03 12:02:44 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char				*ft_strsub(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if (s == NULL)
 		return (NULL);
-	str =  malloc(sizeof(char) * len + 1);
+	str = malloc(sizeof(char) * len + 1);
 	if (str == NULL)
 		return (NULL);
 	if (start > ft_strlen(s))
@@ -30,6 +30,6 @@ char				*ft_strsub(char const *s, unsigned int start, size_t len)
 		str[i] = s[i + start];
 		i++;
 	}
-	str[i] = 0;
+	str[i] = '\0';
 	return (str);
 }
