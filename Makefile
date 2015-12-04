@@ -6,7 +6,7 @@
 #    By: droly <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/03 17:07:51 by droly             #+#    #+#              #
-#    Updated: 2015/12/03 17:44:28 by droly            ###   ########.fr        #
+#    Updated: 2015/12/04 11:58:10 by droly            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,6 +57,7 @@ SRC = ft_memset.c	\
       ft_itoa.c		\
       ft_putchar.c	\
       ft_putstr.c	\
+      ft_strsplit.c	\
 
 OBJ = $(SRC:.c=.o)
 
