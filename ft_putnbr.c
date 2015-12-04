@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/02 10:44:07 by droly             #+#    #+#             */
-/*   Updated: 2015/12/04 15:19:22 by droly            ###   ########.fr       */
+/*   Created: 2015/12/04 14:31:02 by droly             #+#    #+#             */
+/*   Updated: 2015/12/04 14:42:13 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strmap(char const *s, char (*f)(char))
+void	ft_putnbr(int n)
 {
-	int		i;
-	int		i2;
-	char	*str;
-
-	i = 0;
-	if (!s || !f)
-		return (NULL);
-	i2 = strlen((char*)s);
-	if ((str = (char*)malloc(sizeof(char) * (i2 + 1))) == NULL)
-		return (NULL);
-	while (s[i] != '\0')
+	if (n == -2147483648)
+		ft_putstr("-2147483648");
+	if (n < 0)
 	{
-		str[i] = f(s[i]);
-		i++;
+		n = n * -1;
+		ft_putchar('-');
 	}
-	str[i] = '\0';
-	return (str);
+	if (n >= 10)
+	{
+		ft_putnbr(n / 10);
+		ft_putnbr(n % 10);
+	}
+	else
+		ft_putchar(n + '0');
 }

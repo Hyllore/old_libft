@@ -6,12 +6,11 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 20:18:33 by droly             #+#    #+#             */
-/*   Updated: 2015/12/04 14:04:23 by droly            ###   ########.fr       */
+/*   Updated: 2015/12/04 15:42:37 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int			ft_count1(char const *s, int i, char c, int tmp)
 {
@@ -88,6 +87,8 @@ char		**ft_strsplit(char const *s, char c)
 {
 	char	**tab;
 
+	if (!s)
+		return (NULL);
 	if ((tab = (char**)malloc(sizeof(char*) *
 					(ft_count1(s, 0, c, 0)))) == NULL)
 		return (NULL);

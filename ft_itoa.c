@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 14:13:26 by droly             #+#    #+#             */
-/*   Updated: 2015/12/03 19:57:32 by droly            ###   ########.fr       */
+/*   Updated: 2015/12/04 16:25:17 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ char		*ft_itoa(int n)
 		n = -1 * n;
 		neg = 1;
 	}
-	if ((str = malloc(sizeof(char) * ft_size(n, i))) == NULL)
+	if ((str = (char*)malloc(sizeof(char) * (ft_size(n, i) + 1))) == NULL)
 		return (NULL);
 	i2 = i2 + ft_size(n, i);
 	i = i2;
