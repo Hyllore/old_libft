@@ -6,7 +6,7 @@
 #    By: droly <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/03 17:07:51 by droly             #+#    #+#              #
-#    Updated: 2015/12/04 14:45:13 by droly            ###   ########.fr        #
+#    Updated: 2015/12/05 13:31:00 by droly            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,10 +71,12 @@ HEAD = libft.h
 
 FLAGS = -Wall -Wextra -Werror
 
+.PHONY: clean fclean re
+
 all: $(NAME)
 
 $(NAME) :
-	@gcc $(FLAGS) -c $(SRC)
+	@clang $(FLAGS) -c $(SRC)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 	@echo "compilation..."

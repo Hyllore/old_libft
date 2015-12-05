@@ -6,20 +6,20 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 14:13:26 by droly             #+#    #+#             */
-/*   Updated: 2015/12/04 16:25:17 by droly            ###   ########.fr       */
+/*   Updated: 2015/12/05 14:40:34 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_size(int n, int i)
+static int	ft_size(int n, int i)
 {
 	if (n > 0)
 		return (ft_size(n / 10, ++i));
 	return (i);
 }
 
-char		*ft_content(char *str, int i2, int i, int n)
+static char	*ft_content(char *str, int i2, int i, int n)
 {
 	if (n == 0)
 		return ("0");

@@ -6,13 +6,13 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 20:18:33 by droly             #+#    #+#             */
-/*   Updated: 2015/12/04 15:42:37 by droly            ###   ########.fr       */
+/*   Updated: 2015/12/05 15:16:18 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_count1(char const *s, int i, char c, int tmp)
+static int	ft_count1(char const *s, int i, char c, int tmp)
 {
 	while (s[i] != '\0')
 	{
@@ -28,7 +28,7 @@ int			ft_count1(char const *s, int i, char c, int tmp)
 	return (tmp);
 }
 
-char		**ft_count2(const char *s, int tmp2, char c, char **tab)
+static char	**ft_count2(const char *s, int tmp2, char c, char **tab)
 {
 	int		i;
 	int		i2;
@@ -55,7 +55,7 @@ char		**ft_count2(const char *s, int tmp2, char c, char **tab)
 	return (tab);
 }
 
-char		**ft_treat(char **tab, int i2, char *s, char c)
+static char	**ft_treat(char **tab, int i2, char *s, char c)
 {
 	int		tmp2;
 	int		i;
