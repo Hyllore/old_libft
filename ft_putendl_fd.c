@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 14:27:58 by droly             #+#    #+#             */
-/*   Updated: 2015/12/04 14:29:13 by droly            ###   ########.fr       */
+/*   Updated: 2015/12/07 15:18:50 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putendl_fd(char const *s, int fd)
 {
+	if (!s)
+		return ;
 	ft_putstr_fd((char*)s, fd);
 	ft_putchar_fd('\n', fd);
 }
