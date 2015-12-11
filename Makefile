@@ -6,7 +6,7 @@
 #    By: droly <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/03 17:07:51 by droly             #+#    #+#              #
-#    Updated: 2015/12/10 19:25:23 by droly            ###   ########.fr        #
+#    Updated: 2015/12/11 11:11:55 by droly            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,11 +68,10 @@ SRC = ft_memset.c		\
       ft_lstdelone.c	\
       ft_lstdel.c		\
       ft_lstadd.c		\
-      ft_lstmap.c
+      ft_lstmap.c		\
+      ft_lstiter.c
 
 OBJ = $(SRC:.c=.o)
-
-HEAD = libft.h
 
 FLAGS = -Wall -Wextra -Werror
 
@@ -81,7 +80,7 @@ FLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME) :
-	@clang $(FLAGS) -c $(SRC)
+	@gcc $(FLAGS) -c $(SRC)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 	@echo "compilation..."
@@ -95,4 +94,3 @@ fclean: clean
 	@echo "supression totale..."
 
 re: fclean all
-

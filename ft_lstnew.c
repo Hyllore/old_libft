@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/10 15:44:27 by droly             #+#    #+#             */
-/*   Updated: 2015/12/10 19:01:49 by droly            ###   ########.fr       */
+/*   Updated: 2015/12/11 11:13:52 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	}
 	else
 	{
-		if((tmp->content = malloc(content_size)) == NULL)
+		if ((tmp->content = malloc(content_size)) == NULL)
 		{
 			free(tmp);
 			return (NULL);
