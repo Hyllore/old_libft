@@ -6,7 +6,7 @@
 #    By: droly <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/03 17:07:51 by droly             #+#    #+#              #
-#    Updated: 2015/12/11 11:11:55 by droly            ###   ########.fr        #
+#    Updated: 2015/12/16 17:41:47 by droly            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,7 +69,8 @@ SRC = ft_memset.c		\
       ft_lstdel.c		\
       ft_lstadd.c		\
       ft_lstmap.c		\
-      ft_lstiter.c
+      ft_lstiter.c		\
+      ft_sqrt.c
 
 OBJ = $(SRC:.c=.o)
 
