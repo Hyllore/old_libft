@@ -6,7 +6,7 @@
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 15:09:59 by droly             #+#    #+#             */
-/*   Updated: 2015/12/14 10:28:49 by droly            ###   ########.fr       */
+/*   Updated: 2016/02/24 18:21:41 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <unistd.h>
 # include <string.h>
+# include <wchar.h>
 # include <stdlib.h>
 
 typedef struct		s_list
@@ -23,6 +24,9 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+char				*ft_itoa_base(int value, int base);
+void				ft_putnbr_u(unsigned n);
+char				*ft_itoa_u(unsigned int n);
 void				ft_putstr(char *str);
 void				ft_putchar(char c);
 char				*ft_strcpy(char *dest, const char *src);
@@ -51,7 +55,7 @@ void				*ft_memmove(void *dest, const void *src, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 char				*ft_strncat(char *s1, const char *s2, size_t n);
-int					ft_atoi(const char *str);
+long long			ft_atoi(const char *str);
 size_t				ft_strlcat(char *dst, const char *src, size_t n);
 void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
@@ -68,6 +72,7 @@ char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
 char				*ft_itoa(int n);
+char				*ft_utoa(unsigned long long n);
 char				**ft_strsplit(char const *s, char c);
 void				ft_putendl(char const *s);
 void				ft_putchar_fd(char c, int fd);
@@ -81,5 +86,10 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+int					ft_power(int n, int power);
+void				ft_putwchar(wchar_t c);
+char				*ft_itoa_base_ull(unsigned long long value, int base);
+int					ft_putwstr(wchar_t *str);
+unsigned long long	ft_utoi(const char *str);
 
 #endif

@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_power.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: droly <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/04 14:31:02 by droly             #+#    #+#             */
-/*   Updated: 2016/01/18 14:29:01 by droly            ###   ########.fr       */
+/*   Created: 2016/02/18 17:05:46 by droly             #+#    #+#             */
+/*   Updated: 2016/02/18 17:06:54 by droly            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_putnbr(int n)
+int		ft_power(int n, int power)
 {
-	long	num;
+	int	result;
 
-	num = (long)n;
-	if (num < 0)
+	if (power < 0 || n == 0)
+		return (0);
+	if (power == 0)
+		return (1);
+	result = n;
+	while (power != 1)
 	{
-		num = num * -1;
-		ft_putchar('-');
+		result *= n;
+		power--;
 	}
-	if (num >= 10)
-	{
-		ft_putnbr(num / 10);
-		ft_putnbr(num % 10);
-	}
-	else
-		ft_putchar(num + '0');
+	return (result);
 }
